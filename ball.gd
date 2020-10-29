@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-const SPEED = 10
+const SPEED = 20
 var impulse = Vector2(0.3,0.3)
 export var index = 1
 
