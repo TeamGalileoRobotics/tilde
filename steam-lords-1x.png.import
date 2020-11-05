@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/blackbar_edge.png-9ec6bc4d0caa916342ce8334ca73dd85.stex"
+path="res://.import/steam-lords-1x.png-6e5acc474b74fdd53d13507a0c4b16d1.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://blackbar_edge.png"
-dest_files=[ "res://.import/blackbar_edge.png-9ec6bc4d0caa916342ce8334ca73dd85.stex" ]
+source_file="res://steam-lords-1x.png"
+dest_files=[ "res://.import/steam-lords-1x.png-6e5acc474b74fdd53d13507a0c4b16d1.stex" ]
 
 [params]
 
