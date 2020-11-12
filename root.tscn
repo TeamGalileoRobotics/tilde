@@ -14,12 +14,13 @@ script = ExtResource( 3 )
 
 [node name="chaser0" type="RigidBody2D" parent="."]
 position = Vector2( 288.553, 229.479 )
-mass = 0.5
+mass = 0.2
 gravity_scale = 0.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = 10
 index = 0
 
 [node name="collision" type="CollisionShape2D" parent="chaser0"]
@@ -33,12 +34,13 @@ texture = ExtResource( 5 )
 
 [node name="target" type="RigidBody2D" parent="."]
 position = Vector2( 857.19, 340.622 )
-mass = 0.5
+mass = 0.2
 gravity_scale = 0.0
 script = ExtResource( 2 )
 __meta__ = {
 "_edit_group_": true
 }
+speed = 10
 
 [node name="collision" type="CollisionShape2D" parent="target"]
 position = Vector2( 0, 0.104674 )
