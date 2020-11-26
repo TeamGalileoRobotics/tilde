@@ -26,6 +26,13 @@ __meta__ = {
 speed = 10
 index = 0
 
+[node name="camera" type="Camera2D" parent="chaser0"]
+current = true
+drag_margin_h_enabled = true
+drag_margin_v_enabled = true
+smoothing_enabled = true
+editor_draw_drag_margin = true
+
 [node name="collision" type="CollisionShape2D" parent="chaser0"]
 position = Vector2( 0, 0.104674 )
 scale = Vector2( 0.5, 0.5 )
