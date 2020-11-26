@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-export var speed = 20
+export var speed = 10
 export var index = 1
 
 func _ready():
