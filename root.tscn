@@ -101,7 +101,7 @@ shape = SubResource( 1 )
 scale = Vector2( 4, 4 )
 texture = ExtResource( 8 )
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="tilemap" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
 z_index = -1
 tile_set = ExtResource( 4 )
