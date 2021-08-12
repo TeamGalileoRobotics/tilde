@@ -11,5 +11,5 @@ func _physics_process(_delta):
 	var impulse = Vector2(data[0], -data[1])
 	set_applied_force(impulse*speed)
 
-func set_sprite(index):
-	$sprite.texture = load("res://chaser_%s.png" % index)
+func set_sprite(img_index):
+	$sprite.texture = load("res://chaser_%s.png" % img_index)

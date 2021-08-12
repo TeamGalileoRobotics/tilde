@@ -16,7 +16,7 @@ script = ExtResource( 3 )
 [node name="target" type="RigidBody2D" parent="." groups=[
 "targets",
 ]]
-position = Vector2( 857.19, 340.622 )
+position = Vector2( 913.351, 287.293 )
 mass = 0.2
 gravity_scale = 0.0
 contacts_reported = 1
@@ -35,16 +35,6 @@ shape = SubResource( 1 )
 [node name="sprite" type="Sprite" parent="target"]
 scale = Vector2( 4, 4 )
 texture = ExtResource( 1 )
-
-[node name="chaser_0" parent="." instance=ExtResource( 2 )]
-
-[node name="chaser_1" parent="." instance=ExtResource( 2 )]
-position = Vector2( 365.075, 429.612 )
-index = 2
-
-[node name="chaser_2" parent="." instance=ExtResource( 2 )]
-position = Vector2( 666.115, 101.663 )
-index = 3
 
 [node name="tilemap" type="TileMap" parent="."]
 scale = Vector2( 4, 4 )
@@ -67,5 +57,7 @@ smoothing_enabled = true
 smoothing_speed = 10.0
 editor_draw_drag_margin = true
 script = ExtResource( 7 )
+
+[node name="chaser" parent="." instance=ExtResource( 2 )]
 
 [connection signal="body_entered" from="target" to="target" method="_on_body_collision"]
