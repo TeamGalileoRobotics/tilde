@@ -25,7 +25,7 @@ func _connected(_proto = ""):
 func _on_data():
 	data = JSON.parse(_client.get_peer(1).get_packet().get_string_from_utf8()).get_result()
 	
-	if get_tree().get_nodes_in_group("chasers").size() < data.keys().size():
+	while get_tree().get_nodes_in_group("chasers").size() < data.keys().size():
 		var new_chaser = Chaser.instance();
 		new_chaser.index = get_tree().get_nodes_in_group("chasers").size() + 1
 		new_chaser.set_sprite(new_chaser.index)
