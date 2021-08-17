@@ -2,6 +2,8 @@ extends Node2D
 
 export var websocket_url = "ws://10.42.0.1:1338"
 
+const Chaser = preload("res://chaser.tscn")
+
 var _client = WebSocketClient.new()
 var data = {}
 
@@ -22,6 +24,15 @@ func _connected(_proto = ""):
 
 func _on_data():
 	data = JSON.parse(_client.get_peer(1).get_packet().get_string_from_utf8()).get_result()
+	
+	while get_tree().get_nodes_in_group("chasers").size() < data.keys().size():
+		var new_chaser = Chaser.instance();
+		new_chaser.index = get_tree().get_nodes_in_group("chasers").size() + 1
+		new_chaser.set_sprite(new_chaser.index)
+		# TODO: it would probably be good to have specific spawning points later
+		new_chaser.position = Vector2(600,120)
+		
+		self.add_child(new_chaser, true)
 	_client.get_peer(1).put_packet("get".to_utf8())
 
 func _process(_delta):

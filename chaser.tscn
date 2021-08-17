@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://chaser_0.png" type="Texture" id=1]
+[ext_resource path="res://ball.gd" type="Script" id=2]
+
+[sub_resource type="CircleShape2D" id=1]
+radius = 48.0
+
+[node name="chaser" type="RigidBody2D" groups=[
+"chasers",
+]]
+position = Vector2( 288.553, 229.479 )
+mass = 0.2
+gravity_scale = 0.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="collision" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.104674 )
+scale = Vector2( 0.5, 0.5 )
+shape = SubResource( 1 )
+
+[node name="sprite" type="Sprite" parent="."]
+scale = Vector2( 4, 4 )
+texture = ExtResource( 1 )
