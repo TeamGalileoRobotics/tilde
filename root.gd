@@ -1,6 +1,6 @@
 extends Node2D
 
-export var websocket_url = "ws://10.42.0.1:1338"
+export var websocket_url = "ws://127.0.0.1:1338"
 
 const Chaser = preload("res://chaser.tscn")
 
