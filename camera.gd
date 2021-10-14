@@ -5,15 +5,11 @@ export var max_zoom = 1
 export var margin = 150
 export var zoom_smoothness = 5
 
-var players
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	players = get_tree().get_nodes_in_group("chasers") \
-		+ get_tree().get_nodes_in_group("targets")
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	var players = get_tree().get_nodes_in_group("chasers") \
+		+ get_tree().get_nodes_in_group("targets")
+	
 	# Calculate bbox center
 	var min_x = INF
 	var min_y = INF
