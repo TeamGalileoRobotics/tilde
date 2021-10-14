@@ -11,10 +11,10 @@ func _process(delta):
 		+ get_tree().get_nodes_in_group("targets")
 	
 	# Calculate bbox center
-	var min_x = INF
-	var min_y = INF
-	var max_x = -INF
-	var max_y = -INF
+	var min_x = 1e9
+	var min_y = 1e9
+	var max_x = -1e9
+	var max_y = -1e9
 	
 	for player in players:
 		min_x = min(min_x, player.position.x)
